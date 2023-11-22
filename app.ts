@@ -5,13 +5,13 @@ import express from 'express';
 import httpErrors from "http-errors";
 import cors from "cors";
 
-import todoRoutes from "./routes/todo.route";
+import todoRoutes from "./src/routes/todo.route";
 
 const expenseTrackerBackendApp = express();
 
 expenseTrackerBackendApp.use(cors());
 
-import {sequelize} from './helper/common/init_mysql';
+import {sequelize} from './src/helper/common/init_mysql';
 
 
 expenseTrackerBackendApp.use(express.json());
